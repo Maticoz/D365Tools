@@ -1,0 +1,7 @@
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\bin\Debug\FixLabels.exe.config
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\bin\Debug\FixLabels.exe
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\bin\Debug\FixLabels.pdb
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.csproj.AssemblyReference.cache
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.csproj.CoreCompileInputs.cache
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.exe
+C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.pdb
