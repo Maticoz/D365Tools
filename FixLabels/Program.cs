@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace FixLabels
 {
@@ -77,11 +78,16 @@ namespace FixLabels
                 idx = i;
                 DuplicateLabel labelx = this.duplicateLabels[idx];
 
-                if (labelx.label == null && labelx.labelList.Count == 1)
+                if(labelx.label == null)
                 {
-                    labelx.label = labelx.labelList[0];
-                    this.duplicateLabels[idx] = labelx;
+                    int uniqueLabel = (from x in labelx.labelList select x).Distinct().Count();
+                    if (labelx.labelList.Count == 1 || uniqueLabel == 1)
+                    {
+                        labelx.label = labelx.labelList[0];
+                        this.duplicateLabels[idx] = labelx;
+                    }
                 }
+
             }
 
 
