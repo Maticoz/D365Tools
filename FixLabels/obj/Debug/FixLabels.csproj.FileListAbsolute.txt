@@ -5,3 +5,11 @@ C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.csproj
 C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.csproj.CoreCompileInputs.cache
 C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.exe
 C:\Users\Matico\Desktop\D365Tools\FixLabels\FixLabels\obj\Debug\FixLabels.pdb
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\bin\Debug\FixLabels.exe.config
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\bin\Debug\FixLabels.exe
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\bin\Debug\FixLabels.pdb
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\obj\Debug\FixLabels.csproj.AssemblyReference.cache
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\obj\Debug\FixLabels.csproj.SuggestedBindingRedirects.cache
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\obj\Debug\FixLabels.csproj.CoreCompileInputs.cache
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\obj\Debug\FixLabels.exe
+M:\Gdrive\Codes\C#\D365Tools\FixLabels\obj\Debug\FixLabels.pdb

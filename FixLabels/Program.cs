@@ -11,6 +11,9 @@ namespace FixLabels
         string text = "";
         string outputVal = "";
 
+        private int counterConflicts = 0;
+        private int counterAutoResolv = 0;
+
         String[] Labels;
         List<string> uniqueLabels = new List<string>();
         List<string> uniqueOutput = new List<string>();
@@ -51,7 +54,8 @@ namespace FixLabels
 
         public void run()
         {
-
+            Console.OutputEncoding = System.Text.Encoding.GetEncoding("Windows-1250");
+            Console.InputEncoding  = System.Text.Encoding.GetEncoding("Windows-1250");
             Console.WriteLine("Wklej zawartość labelki a następnie enter:");
 
             this.readData();
@@ -80,14 +84,19 @@ namespace FixLabels
 
                 if(labelx.label == null)
                 {
+                    int notuniqueLabels = (from x in labelx.labelList select x).Count();
                     int uniqueLabel = (from x in labelx.labelList select x).Distinct().Count();
+
+                    if (notuniqueLabels != uniqueLabel && notuniqueLabels > 1)
+                    {
+                        counterAutoResolv++;
+                    }
                     if (labelx.labelList.Count == 1 || uniqueLabel == 1)
                     {
                         labelx.label = labelx.labelList[0];
                         this.duplicateLabels[idx] = labelx;
                     }
                 }
-
             }
 
 
@@ -105,7 +114,7 @@ namespace FixLabels
                 string readedLine = Console.ReadLine();
                 choosed = Convert.ToInt32(readedLine);
                 Console.WriteLine($"Wybrano {choosed} - {this.duplicateLabels[indexOf].labelList[choosed - 1]} - nacisnij enter zeby kontynuowac");
-
+                counterConflicts++;
                 this.duplicateLabels[indexOf].label = this.duplicateLabels[indexOf].labelList[choosed - 1];
 
                 Console.ReadKey();
@@ -125,12 +134,18 @@ namespace FixLabels
 
         public void outputClip()
         {
+            int counter = 0;
             outputVal = "";
             foreach (DuplicateLabel uniqueOut in this.duplicateLabels)
             {
                 outputVal += uniqueOut.label + "\n";
+                counter++;
             }
-            Clipboard.SetText(outputVal);
+            Clipboard.SetText(outputVal, TextDataFormat.UnicodeText);
+            Console.WriteLine(outputVal);
+            Console.WriteLine($"Ilość labelek : {counter}");
+            Console.WriteLine($"Ilość konfliktów: {counterConflicts}");
+            Console.WriteLine($"Ilość duplikatów - automatycznie usunietych: {counterAutoResolv}");
         }
 
         public void init()
